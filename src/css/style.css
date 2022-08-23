@@ -1,0 +1,275 @@
+@font-face {
+    font-family: "Spartan";
+    src: url("../../assets/fonts/spartan/Spartan-Regular.ttf");
+
+}
+
+@font-face {
+    font-family: "Spartan-Bold";
+    src: url("../../assets/fonts/spartan/Spartan-Bold.ttf");
+}
+
+@font-face {
+    font-family: "WorkSans-Bold";
+    src: url("../../assets/fonts/work_sans/WorkSans-Bold.ttf");
+}
+
+:root {
+    --body-bg-color: #121214;
+    --text-color: #E1E1E6;
+    --title-color: #04D361;
+    --form-color: #A8A8A8;
+    --bg-button-color: #8257e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    font-family: "Spartan";
+}
+
+main {
+    display: flex;
+}
+
+/* Primeiro conteúdo */
+
+#first-content {
+    width: 50%;
+    margin-left: 30px;
+}
+
+#logo {
+    width: 389px;
+    height: 94px;
+    margin-top: 50px;
+    margin-bottom: 92px;
+}
+
+.description h1 {
+    color: var(--title-color);
+    font-family: "WorkSans-Bold";
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.description h2 {
+    font-family: "Spartan-Bold";
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+.description p {
+    font-size: 14px;
+    max-width: 647px;
+}
+
+form {
+    margin-top: 56px;
+}
+
+label {
+    color: var(--form-color);
+    font-size: 18px;
+}
+
+.input-div {
+    width: 798px;
+    height: 48px;
+    display: flex;
+    margin-top: 17px;
+    margin-bottom: 48px;
+}
+
+.input-div #green {
+    width: 5px;
+    height: 100%;
+    background-color: #04D361;
+}
+
+.input-div .input-group {
+    width: 750px;
+}
+
+.input-div input {
+    width: 750px;
+    height: 100%;
+    color: #6A6A6A;
+    font-size: 16px;
+    padding: 15px 17px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.input-div .input-group .error {
+    color: #db5a5a;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.input-div button {
+    width: 48px;
+    height: 100%;
+    background-color: var(--bg-button-color);
+    color: white;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-div button:hover {
+    background-color: #734ECC;
+}
+
+.read-first {
+    width: 250px;
+    color: var(--bg-button-color);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.read-first span {
+    margin-right: 9px;
+}
+
+.underline-hover-effect {
+    position: relative;
+}
+
+.underline-hover-effect::before {
+    width: 0;
+    height: 2px;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--bg-button-color);
+    transition: width 0.25s ease-out;
+}
+
+.underline-hover-effect:hover::before {
+    width: 97%;
+    left: 0;
+    right: auto;
+}
+
+/* Segundo conteúdo */
+
+#second-content {
+    width: 50%;
+    z-index: -3;
+}
+
+#second-content img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Media Queries */
+/* Large and Medium devices (1200px and down) */
+@media screen and (max-width: 1200px) {
+    #logo {
+        width: 290px;
+        height: 90px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    
+    .description {
+        margin-right: 20px;
+    }
+    .description h1 {
+        font-size: 20px;
+    }
+
+    .description h2 {
+        font-size: 15px;
+    }
+
+    .description p {
+        font-size: 13px;
+    }
+
+    form {
+        margin-top: 40px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    .input-div {
+        width: 110%;
+        margin-bottom: 40px;
+    }
+
+    .input-div input {
+        width: 100%;
+    }
+
+    #second-content img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+    #first-content {
+        width: 100%;
+        margin: 30px;
+    }
+
+    #logo {
+        width: 250px;
+        height: 90px;
+        margin-top: 0;
+        margin-bottom: 30px;
+
+    }
+
+    .description h1 {
+        font-size: 18px;
+    }
+
+    .description h2 {
+        font-size: 14px;
+    }
+
+    .description p {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    form {
+        margin-top: 30px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    .input-div {
+        width: 90%;
+    }
+
+    .input-div input {
+        width: 95%;
+    }
+
+
+    #second-content {
+        display: none;
+    }
+}
+
