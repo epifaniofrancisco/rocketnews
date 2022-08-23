@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RocketNews.</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- SEO -->
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <meta name="author" content="Epifânio Francisco" />
+    <meta
+      name="description"
+      content="O RocketNews é um website que dá informações sobre as notícias de programação. Esteja preparado para começar a codar."
+    />
+</head>
+
+<body>
+    <main>
+        <section id="first-content">
+            <img src="assets/logo.svg" alt="Logo da RocketNews" id="logo">
+
+            <div class="description">
+                <h1>atualize ideias e informações em 5 minutos.</h1>
+                <h2>tudo que você precisa saber para começar seu dia bem e informado</h2>
+                <p>noticias sobre o universo Rocketseat. e tudo o que precisa para começar o dia melhor. perfeito para
+                    se preparar para codar☕</p>
+            </div>
+
+            <form action="src/php/dbconnect.php" method="post" id="form" name="form1" onsubmit="return validateEmail(document.form1.email)">
+                <label for="email">Insira seu email:</label>
+
+                <div class="input-div">
+                    <div id="green"></div>
+                    <div class="input-group">
+                        <input type="email" name="email" id="email" placeholder="oi@rocketseat.com" required>
+                        <span class="error"></span>
+                    </div>
+                    <button type="submit"><img src="assets/send.svg" alt=""></button>
+                </div>
+            </form>
+
+            <p class="read-first underline-hover-effect">
+                <span>deixe-me ler primeiro</span>
+                <img src="assets/arrow-right.svg" alt="">
+            </p>
+        </section>
+
+        <section id="second-content">
+            <img src="assets/read_news.jpg" alt="">
+        </section>
+
+    </main>
+</body>
+
+</html>
